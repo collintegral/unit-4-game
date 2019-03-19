@@ -160,12 +160,18 @@ function timeMessages(destination) {
 function playerSelect() {
     for (var i = 0; i < mainDinos.length; i++) {
         if (mainDinos[i] != playerDino) {
-                enemyDinos[i] = mainDinos[i];
+                enemyDinos.push(mainDinos[i]);
+                console.log(enemyDinos);
         }
     }
 
     for (var i = 0; i < enemyDinos.length; i++) {
-        enemyDinos[i].object.appendTo(dinoEnemies[i].click(enemySelect(enemyDinos[i], i)));
+        let index = i;
+        let enemyItem = enemyDinos[index];
+        let enemyBlock = dinoEnemies[index];
+        console.log(index + " " + enemyItem + " " + enemyBlock)
+        enemyBlock.click(enemySelect(enemyItem, index))
+        enemyItem.object.appendTo();
     }
 
     gotoEnemyChoice();

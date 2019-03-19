@@ -2,6 +2,10 @@ body {
     background-image: url("../images/background.jpg");
 }
 
+h4 {
+    color: white;
+}
+
 .hanalei {
     font-family: 'Hanalei Fill', cursive;
 }
